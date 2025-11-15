@@ -19,6 +19,9 @@ const io = socketIo(server, {
 });
 
 // Middleware
+console.log('🔍 CLIENT_URL from environment:', process.env.CLIENT_URL);
+console.log('🔍 CORS origin will be:', process.env.CLIENT_URL || 'http://localhost:3000');
+
 app.use(helmet());
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
