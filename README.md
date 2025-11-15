@@ -6,6 +6,13 @@ A full-stack collaborative task management application built with MongoDB, Expre
 ![Node Version](https://img.shields.io/badge/node-v22.17.1-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+## 🚀 Live Demo
+
+**Frontend**: [https://mern-final-project-magwaza51.vercel.app](https://mern-final-project-magwaza51.vercel.app)  
+**Backend API**: [https://mern-final-project-magwaza51.onrender.com](https://mern-final-project-magwaza51.onrender.com)
+
+> **Note**: The backend is hosted on Render's free tier and may take 30-60 seconds to wake up on first request.
+
 ## 🎯 Project Overview
 
 A real-time collaborative task management system where teams can create projects, manage tasks, assign team members, and track progress in real-time. Built as the final capstone project for the MERN Stack Development course.
@@ -339,22 +346,75 @@ npm test
 
 ## 🌐 Deployment
 
-### Backend Deployment (Render/Railway)
-1. Create account on Render or Railway
-2. Connect GitHub repository
-3. Set environment variables
-4. Deploy backend service
+✅ **This application is deployed and live!**
 
-### Frontend Deployment (Vercel/Netlify)
-1. Build the frontend: `npm run build`
-2. Deploy to Vercel or Netlify
-3. Update API URL in frontend
+### Production URLs
+- **Frontend**: [https://mern-final-project-magwaza51.vercel.app](https://mern-final-project-magwaza51.vercel.app)
+- **Backend API**: [https://mern-final-project-magwaza51.onrender.com](https://mern-final-project-magwaza51.onrender.com)
+- **Database**: MongoDB Atlas (Cloud)
 
-### MongoDB Atlas Setup
-1. Create free MongoDB Atlas account
-2. Create cluster and database
-3. Get connection string
-4. Update MONGODB_URI in environment variables
+### Deployment Details
+
+**Backend (Render)**
+- ✅ Deployed on Render free tier
+- ✅ Connected to GitHub repository
+- ✅ Environment variables configured
+- ✅ Auto-deploys on push to main branch
+- ⚠️ May take 30-60 seconds to wake up on first request (free tier limitation)
+
+**Frontend (Vercel)**
+- ✅ Deployed on Vercel
+- ✅ Connected to GitHub repository
+- ✅ Auto-deploys on push to main branch
+- ✅ Environment variable: `REACT_APP_API_URL` set to Render backend
+- ✅ Custom domain support available
+
+**Database (MongoDB Atlas)**
+- ✅ Free tier cluster (M0)
+- ✅ Cloud-hosted database
+- ✅ Automatic backups
+- ✅ Connection string configured in backend
+
+### How to Deploy Your Own Instance
+
+#### Backend Deployment (Render)
+1. Create account on [Render](https://render.com)
+2. Create new Web Service
+3. Connect your GitHub repository
+4. Configure:
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+   - **Root Directory**: `backend`
+5. Set environment variables:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+   CLIENT_URL=your_vercel_frontend_url
+   NODE_ENV=production
+   ```
+6. Deploy!
+
+#### Frontend Deployment (Vercel)
+1. Create account on [Vercel](https://vercel.com)
+2. Import your GitHub repository
+3. Configure:
+   - **Framework Preset**: Create React App
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `build`
+4. Set environment variable:
+   ```
+   REACT_APP_API_URL=your_render_backend_url/api
+   ```
+5. Deploy!
+
+#### MongoDB Atlas Setup
+1. Create free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. Create new cluster (free M0 tier)
+3. Create database user
+4. Whitelist IP addresses (0.0.0.0/0 for development)
+5. Get connection string
+6. Update `MONGODB_URI` in Render environment variables
 
 ## 📊 Project Progress
 
@@ -388,26 +448,28 @@ npm test
 - ✅ Setup instructions
 - ✅ Code comments
 
-### 🎯 Next Steps for Deployment
+**Deployment (100%)**
+- ✅ Backend deployed to Render
+- ✅ Frontend deployed to Vercel
+- ✅ MongoDB Atlas configured
+- ✅ CORS configured
+- ✅ Environment variables set
 
-1. **Deploy Backend** (Render/Railway)
-   - Create account on [Render](https://render.com) or [Railway](https://railway.app)
-   - Connect GitHub repository
-   - Set environment variables (MONGODB_URI, JWT_SECRET, etc.)
-   - Deploy backend service
+### 🎯 Final Steps
 
-2. **Deploy Frontend** (Vercel/Netlify)
-   - Create account on [Vercel](https://vercel.com) or [Netlify](https://netlify.com)
-   - Connect GitHub repository
-   - Update `REACT_APP_API_URL` to deployed backend URL
-   - Deploy frontend
+1. **✅ Deploy Backend** - Complete!
+   - Deployed to Render: https://mern-final-project-magwaza51.onrender.com
 
-3. **Create Video Demonstration**
+2. **✅ Deploy Frontend** - Complete!
+   - Deployed to Vercel: https://mern-final-project-magwaza51.vercel.app
+
+3. **📹 Create Video Demonstration** - In Progress
    - Record 5-10 minute video showing:
      - Registration and login
      - Creating a project
      - Adding and managing tasks
      - Real-time features
+     - Technical architecture overview
      - Technical architecture overview
 
 ## 📝 Environment Variables
